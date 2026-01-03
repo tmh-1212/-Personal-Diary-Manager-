@@ -1,0 +1,11 @@
+=== Diary Entry ===
+Title: New Entry
+Date: 2026-01-02
+Time: 11:37 PM
+Created: 2026-01-02T23:37:12.070748800
+Modified: 2026-01-02T23:38:02.981545800
+Tags: 
+Favorite: false
+===================
+
+this is my app

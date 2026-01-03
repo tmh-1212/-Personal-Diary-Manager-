@@ -1,0 +1,472 @@
+/* Main Application Styles */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Left Panel */
+.left-panel {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.panel-title {
+    -fx-text-fill: #2c3e50;
+}
+
+.search-field {
+    -fx-background-color: #f1f3f5;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #dee2e6;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+}
+
+.search-field:focused {
+    -fx-border-color: #4dabf7;
+    -fx-background-color: white;
+}
+
+.filter-label {
+    -fx-text-fill: #495057;
+    -fx-font-weight: 500;
+}
+
+.filter-combo {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.entries-scroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.entries-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.entries-container {
+    -fx-background-color: transparent;
+}
+
+.date-header {
+    -fx-padding: 15px 0 5px 0;
+}
+
+.date-header-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-fill: #495057;
+}
+
+.entry-preview {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cursor: hand;
+}
+
+.entry-preview:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #4dabf7;
+}
+
+.entry-time {
+    -fx-font-size: 12px;
+    -fx-text-fill: #868e96;
+    -fx-font-weight: 500;
+    -fx-min-width: 60px;
+}
+
+.favorite-star {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffc107;
+}
+
+.entry-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-fill: #212529;
+}
+
+.entry-preview-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #495057;
+    -fx-wrap-text: true;
+}
+
+.empty-label, .no-results {
+    -fx-text-fill: #868e96;
+    -fx-font-style: italic;
+    -fx-font-size: 14px;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+.import-btn, .export-btn {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: 500;
+}
+
+.import-btn:hover, .export-btn:hover {
+    -fx-background-color: #5a6268;
+}
+
+/* Center Panel */
+.center-panel {
+    -fx-background-color: #f8f9fa;
+}
+
+.app-title {
+    -fx-text-fill: #2c3e50;
+}
+
+.quick-actions {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e9ecef;
+    -fx-padding: 15px;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+}
+
+.quick-action-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+.quick-action-btn:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #4dabf7;
+}
+
+.calendar-section {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e9ecef;
+    -fx-padding: 15px;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #495057;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #f1f3f5;
+}
+
+.month-year-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 0 15px;
+}
+
+.calendar-grid {
+    -fx-background-color: white;
+}
+
+.calendar-day-header {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #868e96;
+}
+
+.calendar-cell {
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+
+.calendar-cell:hover {
+    -fx-background-color: #f1f3f5;
+}
+
+.calendar-cell.today {
+    -fx-background-color: #e7f5ff;
+    -fx-border-color: #4dabf7;
+    -fx-border-width: 2px;
+}
+
+.calendar-cell.selected {
+    -fx-background-color: #4dabf7;
+}
+
+.calendar-cell.selected .calendar-day {
+    -fx-text-fill: white;
+}
+
+.calendar-day {
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #212529;
+}
+
+.entry-dot {
+    -fx-font-size: 24px;
+    -fx-text-fill: #40c057;
+    -fx-font-weight: bold;
+}
+
+.theme-toggle {
+    -fx-background-color: #f1f3f5;
+    -fx-text-fill: #495057;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.theme-toggle:hover {
+    -fx-background-color: #e9ecef;
+}
+
+/* Right Panel */
+.right-panel {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 0 1px;
+}
+
+.date-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #6c757d;
+}
+
+.time-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+    -fx-font-weight: 500;
+}
+
+.title-field {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Georgia", serif;
+    -fx-text-fill: #2c3e50;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5px 0;
+}
+
+.title-field:focused {
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.format-toolbar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.font-combo {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+    -fx-padding: 5px;
+}
+
+.format-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+}
+
+.format-btn:hover {
+    -fx-background-color: #f1f3f5;
+}
+
+.format-btn:selected {
+    -fx-background-color: #e7f5ff;
+    -fx-border-color: #4dabf7;
+    -fx-text-fill: #1c7ed6;
+}
+
+.color-picker {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+    -fx-padding: 5px;
+}
+
+.editor-area {
+    -fx-font-size: 16px;
+    -fx-font-family: "Georgia", serif;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-control-inner-background: white;
+}
+
+.editor-area .content {
+    -fx-background-color: transparent;
+}
+
+.save-btn {
+    -fx-background-color: #20c997;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.save-btn:hover {
+    -fx-background-color: #12b886;
+}
+
+.delete-btn {
+    -fx-background-color: #fa5252;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.delete-btn:hover {
+    -fx-background-color: #e03131;
+}
+
+.favorite-btn {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: #212529;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.favorite-btn:hover {
+    -fx-background-color: #e0a800;
+}
+
+.print-btn {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.print-btn:hover {
+    -fx-background-color: #5a6268;
+}
+
+/* Bottom Panel */
+.bottom-panel {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.status-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+}
+
+.progress-bar {
+    -fx-accent: #4dabf7;
+}
+
+.entry-count {
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057;
+    -fx-font-weight: 500;
+}
+
+.auto-save-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #40c057;
+    -fx-font-weight: 500;
+}
+
+/* Dark Theme Overrides */
+.root.dark-theme {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dark-theme .left-panel,
+.dark-theme .center-panel,
+.dark-theme .right-panel,
+.dark-theme .bottom-panel,
+.dark-theme .quick-actions,
+.dark-theme .calendar-section {
+    -fx-background-color: #363636;
+    -fx-border-color: #444;
+}
+
+.dark-theme .panel-title,
+.dark-theme .app-title,
+.dark-theme .section-title,
+.dark-theme .month-year-label,
+.dark-theme .entry-title,
+.dark-theme .title-field {
+    -fx-text-fill: #e0e0e0;
+}
+
+.dark-theme .search-field {
+    -fx-background-color: #444;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #555;
+}
+
+.dark-theme .entry-preview {
+    -fx-background-color: #3a3a3a;
+    -fx-border-color: #444;
+}
+
+.dark-theme .entry-preview:hover {
+    -fx-background-color: #424242;
+}
+
+.dark-theme .editor-area {
+    -fx-control-inner-background: #2b2b2b;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dark-theme .calendar-day {
+    -fx-text-fill: #e0e0e0;
+}
+
+.dark-theme .calendar-cell.today {
+    -fx-background-color: #1e3a5f;
+    -fx-border-color: #2563eb;
+}
+
+.dark-theme .format-toolbar {
+    -fx-background-color: #363636;
+    -fx-border-color: #444;
+}

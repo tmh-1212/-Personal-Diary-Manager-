@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project name should not contain spaces in XML -->
+<project name="DiaryManager" default="default" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    
+    <description>Personal Diary Manager - JavaFX Application</description>
+    
+    <!-- Set properties -->
+    <property name="src.dir" location="src"/>
+    <property name="build.dir" location="build"/>
+    <property name="dist.dir" location="dist"/>
+    <property name="lib.dir" location="lib"/>
+    <property name="main.class" value="com.diary.Main"/>
+    
+    <!-- JavaFX properties -->
+    <property name="javafx.version" value="17.0.2"/>
+    
+    <!-- Classpath -->
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+        <pathelement location="${build.dir}"/>
+    </path>
+    
+    <!-- Initialize -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <echo message="Java version: ${java.version}"/>
+        <echo message="JavaFX application initializing..."/>
+    </target>
+    
+    <!-- Compile Java source files -->
+    <target name="compile" depends="init">
+        <echo message="Compiling Java source files..."/>
+        <javac 
+            srcdir="${src.dir}" 
+            destdir="${build.dir}" 
+            includeantruntime="false"
+            source="11"
+            target="11"
+            encoding="UTF-8">
+            <compilerarg line="--module-path ${javafx.sdk.path} --add-modules javafx.controls,javafx.fxml"/>
+        </javac>
+        
+        <!-- Copy resources (FXML, CSS, images) -->
+        <copy todir="${build.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java"/>
+        </copy>
+        <echo message="Compilation complete."/>
+    </target>
+    
+    <!-- Create JAR file -->
+    <target name="jar" depends="compile">
+        <echo message="Creating JAR file..."/>
+        <jar destfile="${dist.dir}/DiaryManager.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Implementation-Version" value="1.0.0"/>
+            </manifest>
+        </jar>
+        <echo message="JAR created: ${dist.dir}/DiaryManager.jar"/>
+    </target>
+    
+    <!-- Run the application -->
+    <target name="run" depends="compile">
+        <echo message="Running Diary Manager application..."/>
+        <java 
+            classname="${main.class}" 
+            fork="true"
+            failonerror="true">
+            <classpath>
+                <path refid="classpath"/>
+                <pathelement location="${build.dir}"/>
+            </classpath>
+            <jvmarg line="--module-path ${javafx.sdk.path} --add-modules javafx.controls,javafx.fxml"/>
+        </java>
+    </target>
+    
+    <!-- Clean build directories -->
+    <target name="clean">
+        <echo message="Cleaning build directories..."/>
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="diary_data"/>
+        <echo message="Clean complete."/>
+    </target>
+    
+    <!-- Build and run -->
+    <target name="build-and-run" depends="clean,compile,run">
+        <echo message="Build and run complete."/>
+    </target>
+    
+    <!-- Default target -->
+    <target name="default" depends="compile"/>
+    
+</project>

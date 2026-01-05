@@ -1,26 +1,4 @@
 📓 My Diary - A Modern Desktop Diary Application
-📋 Table of Contents
-Overview
-
-✨ Features
-
-🎨 Screenshots
-
-🏗️ Architecture & Design
-
-🚀 Installation
-
-📖 User Guide
-
-💻 Development Guide
-
-📁 Project Structure
-
-🛠️ Technical Details
-
-🤝 Contributing
-
-📄 License
 
 🎯 Overview
 My Diary is a feature-rich desktop diary application built with JavaFX that provides users with an intuitive interface for recording daily thoughts, organizing entries by categories, and tracking writing habits through a visual calendar. The application combines modern UI design with robust functionality to create a seamless journaling experience.
@@ -210,25 +188,6 @@ Flexibility: Can easily switch to file/database storage
 
 Learning Focus: Demonstrates core Java concepts clearly
 
-🚀 Installation
-Prerequisites
-Java 8 or higher (Java 11+ recommended)
-
-JavaFX SDK (required for running JavaFX applications)
-
-Quick Start Methods
-Method 1: Download Pre-built Version
-Download the latest release
-
-For Windows: Run MyDiary.exe
-
-For Mac/Linux: Run java -jar MyDiary.jar
-
-Method 2: Build from Source
-bash
-# 1. Clone or download the source code
-# 2. Compile the application
-javac -d out src/com/diary/*.java
 
 # 3. Run the application
 java -cp out com.diary.DiaryApp
@@ -238,21 +197,6 @@ Open in IntelliJ IDEA or Eclipse
 Set JavaFX SDK path in project settings
 
 Run DiaryApp.main()
-
-Troubleshooting Installation
-"JavaFX runtime components are missing"
-bash
-# Solution: Run with JavaFX modules
-java --module-path "path/to/javafx-sdk/lib" \
-     --add-modules javafx.controls,javafx.fxml \
-     -cp out com.diary.DiaryApp
-"Application won't start"
-Verify Java installation: java -version
-
-Check JavaFX is properly configured
-
-Ensure no other instances are running
-
 📖 User Guide
 Getting Started
 Launch the application
